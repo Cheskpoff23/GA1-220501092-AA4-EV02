@@ -1,0 +1,153 @@
+\documentclass{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Define Article %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Using Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{empheq}
+\usepackage{mdframed}
+\usepackage{booktabs}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{psfrag}
+\usepackage{pgfplots}
+\usepackage{bm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Other Settings
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Page Setting %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\geometry{letterpaper, margin=2.54cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define some useful colors %%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{ocre}{RGB}{243,102,25}
+\definecolor{mygray}{RGB}{243,243,244}
+\definecolor{deepGreen}{RGB}{26,111,0}
+\definecolor{shallowGreen}{RGB}{235,255,255}
+\definecolor{deepBlue}{RGB}{61,124,222}
+\definecolor{shallowBlue}{RGB}{235,249,255}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%% Define an orangebox command %%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\orangebox[1]{\fcolorbox{ocre}{mygray}{\hspace{1em}#1\hspace{1em}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% English Environments %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheoremstyle{mytheoremstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\newtheoremstyle{myproblemstyle}{3pt}{3pt}{\normalfont}{0cm}{\rmfamily\bfseries}{}{1em}{{\color{black}\thmname{#1}~\thmnumber{#2}}\thmnote{\,--\,#3}}
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowGreen,linecolor=deepGreen,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{theorem}{Theorem}[section]
+\theoremstyle{mytheoremstyle}
+\newmdtheoremenv[linewidth=1pt,backgroundcolor=shallowBlue,linecolor=deepBlue,leftmargin=0pt,innerleftmargin=20pt,innerrightmargin=20pt,]{definition}{Definition}[section]
+\theoremstyle{myproblemstyle}
+\newmdtheoremenv[linecolor=black,leftmargin=0pt,innerleftmargin=10pt,innerrightmargin=10pt,]{problem}{Problem}[section]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Plotting Settings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepgfplotslibrary{colorbrewer}
+\pgfplotsset{width=8cm,compat=1.9}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title & Author %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\author{Gustavo Vergara}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    
+    
+    \vspace{3cm}
+    {\scshape\large DOCUMENTO CON ESPECIFICACIÓN DE REQUERIMIENTOS DEL SISTEMA DE GESTION DE CITAS MEDICAS PARA LA CLINICA REGIONAL DE MONTELIBANO \par}
+    \vspace{7cm}
+    \textbf\large\scshape{\par}
+         \vspace{0.5cm}
+         
+    {\Large Vergara Pareja Gustavo\par}
+    \vspace{7cm}
+    {\scshape\Large Tecnologia en Analisis y Desarrollo de Software \par}
+    \vspace{1cm}
+    {\scshape\Large SENA - Centro Agropecuario Regional Cauca\par}
+    \vspace{1cm}
+    {\Large \today \par}
+    \end{titlepage}
+
+\tableofcontents
+
+\newpage
+
+\begin{flushleft}
+    \large \textbf{EVIDENCIA A SOLUCIONAR}\\
+    \vspace{1cm}
+    
+    \large Evidencia de producto: GA1-220501092-AA4-EV02 documento con especificación de requerimientos
+    Respecto a lista de requerimientos el aprendiz deberá agregar una sección donde se describa cada requisito usando los siguientes elementos del estándar IEEE830.
+    \begin{itemize}
+    \item Perspectiva del producto.
+    \item Funciones del producto.
+    \item Características de los usuarios.
+    \item Restricciones.
+    \item Requisitos funcionales (formato de casos de uso).
+    \item Requisitos no funcionales.
+    \end{itemize}
+    Respecto a la lista de requerimientos el aprendiz deberá agregar una sección donde se describa cada requisito usando la estructura de historias de usuario con los siguientes elementos por historia:
+    \begin{itemize}
+    \item Número de historia (priorizada).
+    \item Nombre de la historia.
+    \item Usuario.
+    \item Puntos estimados de esfuerzo.
+    \item Descripción de la historia de usuario.
+    \item Observaciones.
+    \item Criterios de aceptación.
+    \end{itemize}
+    \end{flushleft}
+    \newpage
+
+
+\section{Introducción}
+\large El software de gestión de citas para una clínica es una herramienta diseñada para facilitar la programación y administración de citas médicas. Este tipo de software permite a los pacientes solicitar citas, a los médicos y personal de la clínica programar y gestionar las citas, y a los administradores supervisar y optimizar el flujo de pacientes. El objetivo principal de este software es mejorar la eficiencia y la experiencia del paciente en la clínica.
+
+\newpage
+
+\section{Requisitos Funcionales}
+\subsection{Registro de pacientes}
+El sistema debe permitir el registro de nuevos pacientes, recopilando información como nombre, fecha de nacimiento, información de contacto y antecedentes médicos relevantes.
+
+\subsection{Programación de citas}
+El sistema debe permitir a los médicos y al personal de la clínica programar citas para los pacientes, teniendo en cuenta la disponibilidad de los médicos y las salas de consulta.
+
+\subsection{Recordatorios de citas}
+El sistema debe enviar recordatorios automáticos de citas a los pacientes a través de mensajes de texto, correos electrónicos u otras formas de comunicación.
+
+\subsection{Gestión de cancelaciones y reprogramaciones}
+El sistema debe permitir a los pacientes cancelar o reprogramar citas, y notificar automáticamente a los médicos y al personal de la clínica sobre los cambios.
+
+\subsection{Historial de citas}
+El sistema debe mantener un registro completo del historial de citas de cada paciente, incluyendo fechas, horas, médicos atendientes y motivo de la visita.
+
+\subsection{Gestión de listas de espera}
+El sistema debe permitir la gestión de listas de espera para citas canceladas o disponibles, notificando a los pacientes en espera cuando se libera una cita.
+
+\newpage
+
+\section{Requisitos No Funcionales}
+\subsection{Usabilidad}
+El sistema debe tener una interfaz intuitiva y fácil de usar tanto para los pacientes como para el personal de la clínica, con una navegación sencilla y clara.
+
+\subsection{Rendimiento}
+El sistema debe ser capaz de manejar un alto volumen de citas y usuarios simultáneos sin experimentar retrasos o caídas en el rendimiento.
+
+\subsection{Seguridad}
+El sistema debe garantizar la confidencialidad y privacidad de la información del paciente, cumpliendo con las regulaciones y estándares de seguridad aplicables.
+
+\subsection{Disponibilidad}
+El sistema debe estar disponible las 24 horas del día, los 7 días de la semana, para que los pacientes puedan acceder y programar citas en cualquier momento.
+
+\end{document}

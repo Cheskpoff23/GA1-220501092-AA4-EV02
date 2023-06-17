@@ -1,0 +1,13 @@
+\contentsline {section}{\numberline {1}Introducción}{3}{}%
+\contentsline {section}{\numberline {2}Requisitos Funcionales}{4}{}%
+\contentsline {subsection}{\numberline {2.1}Registro de pacientes}{4}{}%
+\contentsline {subsection}{\numberline {2.2}Programación de citas}{4}{}%
+\contentsline {subsection}{\numberline {2.3}Recordatorios de citas}{4}{}%
+\contentsline {subsection}{\numberline {2.4}Gestión de cancelaciones y reprogramaciones}{4}{}%
+\contentsline {subsection}{\numberline {2.5}Historial de citas}{4}{}%
+\contentsline {subsection}{\numberline {2.6}Gestión de listas de espera}{4}{}%
+\contentsline {section}{\numberline {3}Requisitos No Funcionales}{5}{}%
+\contentsline {subsection}{\numberline {3.1}Usabilidad}{5}{}%
+\contentsline {subsection}{\numberline {3.2}Rendimiento}{5}{}%
+\contentsline {subsection}{\numberline {3.3}Seguridad}{5}{}%
+\contentsline {subsection}{\numberline {3.4}Disponibilidad}{5}{}%
